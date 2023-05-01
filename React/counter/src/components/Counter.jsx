@@ -10,8 +10,11 @@ import { useState } from "react";
     const decreaseCount = ()=>{
         setState((pstate)=>{return pstate-1})
     }
+    const restB =()=>{
+        setState(0)
+    }
 
-
+   
     return(
         <div>
             <h2>Counter App</h2>
@@ -20,9 +23,12 @@ import { useState } from "react";
 
             <button onClick={increaseCount}>Increase Count</button>
             <button onClick={decreaseCount}>Decrease Count</button>
-
-
-
+            <div>
+                <button onClick={restB}>Reset</button>
+            </div>
+            <div>
+                <h2> Current No. is {state%2==0 ? "Even" : "Odd"} </h2>
+            </div>
         </div>
 
 
